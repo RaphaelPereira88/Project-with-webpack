@@ -12,7 +12,7 @@ describe("Testing the update function", () => {
 
     newpolarity.value = 'ok';
 
-    expect(newpolarity.html).toBe('<div id="polarity">ok</div>')
+    expect(newpolarity.innerHTML).toBe('<div id="polarity">ok</div>')
 
 });
 
