@@ -1,13 +1,14 @@
 import { postData } from "../postData";
 
-beforeEach(() => {
-    fetch.resetMocks();
-});
-  
+global.fetch = jest.fn(() => 
+    Promise.resolve({
+        json: () => Promise.resolve({agreement:"DISAGREEMENT"}),
+    })
+);
 
-it("return input to the server", async () => {
-    fetch.mockResponseOnce(JSON.stringify({ sentence: hello }));
-    const newData = await postData('http://localhost:8081/clientdata',data={})
-    expect(newData).toBe({sentence: hello});
+it("return input", async () => {
+    const data = {agreement:"DISAGREEMENT"}
+    const newData = await postData('http://localhost:8081/clientdata',data)
+    expect(newData).toStrictEqual({agreement:"DISAGREEMENT"})
 });
 

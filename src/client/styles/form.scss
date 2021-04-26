@@ -1,12 +1,16 @@
-form {
-    border: 1px solid #545454;
-    border-radius: 3px;
+$border:1px solid #110909;
+
+form,.output{
+    border: $border;
+    border-radius: 20px;
     padding: 40px;
 }
 
-input {
+input{
     padding: 5px 20px;
     width: 100%;
     line-height: 16px;
     margin: 10px 0;
+    border-radius:20px;
 }
+

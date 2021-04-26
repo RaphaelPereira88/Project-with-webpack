@@ -30,12 +30,28 @@ app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
 
-
-app.post("/clientdata", async function (req, res) {
+//if input is a URL, the program will use this post route
+app.post("/clientdataUrl", async function (req, res) {
     console.log('req====+>', req.body)
     
 
-    const result = await fetch(process.env.API_ID + process.env.API_KEY + req.body.sentence)
+    const result = await fetch(process.env.API_ID + process.env.API_KEY+ "url=" + req.body.sentence)
+    try {
+        console.log (result)
+        const response = await result.json();
+        res.send(response)
+        console.log(response)
+    } catch (error) {
+        console.log("error", error);
+    }
+})
+
+//if the input is a Text, the program will use this post route
+app.post("/clientdataText", async function (req, res) {
+    console.log('req====+>', req.body)
+    
+
+    const result = await fetch(process.env.API_ID + process.env.API_KEY + "txt=" + req.body.sentence)
     try {
         console.log (result)
         const response = await result.json();
