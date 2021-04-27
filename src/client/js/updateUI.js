@@ -1,17 +1,17 @@
 
 const updateUI = async (response) => {
     if (response.score_tag === "P+"){
-        document.getElementById("polarity").innerHTML = "Polarity:" + "Strong positive"
+        document.getElementById("polarity").innerHTML = "Polarity:" + "Strong positive";
     }else if(response.score_tag === "P"){
-        document.getElementById("polarity").innerHTML = "Polarity: "+ "Positive"
+        document.getElementById("polarity").innerHTML = "Polarity: "+ "Positive";
     }else if(response.score_tag ==="NEU"){
-        document.getElementById("polarity").innerHTML = "Polarity: "+ "Neutral"
+        document.getElementById("polarity").innerHTML = "Polarity: "+ "Neutral";
     }else if(response.score_tag ==="N"){
-        document.getElementById("polarity").innerHTML = "Polarity: "+  "negative"
+        document.getElementById("polarity").innerHTML = "Polarity: "+  "negative";
     }else if(response.score_tag === "N+"){
-        document.getElementById("polarity").innerHTML = "Polarity: "+ "strong negative"
+        document.getElementById("polarity").innerHTML = "Polarity: "+ "strong negative";
     }else if(response.score_tag === "NONE"){
-        document.getElementById("polarity").innerHTML = "Polarity: "+ "without polarity"
+        document.getElementById("polarity").innerHTML = "Polarity: "+ "without polarity";
     }
 
     document.getElementById("agreement").innerHTML = "Agreement: " + response.agreement;

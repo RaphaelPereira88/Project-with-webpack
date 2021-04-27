@@ -7,25 +7,25 @@ function urlCheck(inputText) {
         window.stop();
     }else{
         if (regexurl.test(inputText)) {
-            console.log("::: Form Submitted :::")
+            console.log("::: Form Submitted :::");
             document.getElementById("results").innerHTML = " request submitted and being process, please wait few seconds: "
             setTimeout((()=> {document.getElementById("results").innerHTML = ""}), 2000);
             Client.postData('http://localhost:8081/clientdataUrl',{ sentence: inputText })
             .then((response)=> {
                 if (response.status.code==="212"){
-                    alert("please enter a valid URL")
+                    alert("please enter a valid URL");
                     console.log("error", error);
                 }else{
                     try {
                         Client.updateUI(response);
                     } catch (error) {
-                        alert("please enter a valid URL")
+                        alert("please enter a valid URL");
                         console.log("error", error);
                     }
                 }
             })
         } else {
-            console.log("::: Form Submitted :::")
+            console.log("::: Form Submitted :::");
             document.getElementById("results").innerHTML = " request submitted and being process, please wait few seconds: "
             setTimeout((()=> {document.getElementById("results").innerHTML = ""}), 2000);
             Client.postData('http://localhost:8081/clientdataText',{ sentence: inputText })

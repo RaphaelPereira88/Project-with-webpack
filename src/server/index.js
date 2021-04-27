@@ -35,7 +35,7 @@ app.post("/clientdataUrl", async function (req, res) {
     console.log('req====+>', req.body)
     
 
-    const result = await fetch(process.env.API_ID + process.env.API_KEY+ "url=" + req.body.sentence)
+    const result = await fetch("https://api.meaningcloud.com/sentiment-2.1?" + process.env.API_KEY+ "url=" + req.body.sentence)
     try {
         console.log (result)
         const response = await result.json();
@@ -51,7 +51,7 @@ app.post("/clientdataText", async function (req, res) {
     console.log('req====+>', req.body)
     
 
-    const result = await fetch(process.env.API_ID + process.env.API_KEY + "txt=" + req.body.sentence)
+    const result = await fetch("https://api.meaningcloud.com/sentiment-2.1?" + process.env.API_KEY + "txt=" + req.body.sentence)
     try {
         console.log (result)
         const response = await result.json();
