@@ -33,8 +33,6 @@ app.get('/test', function (req, res) {
 //if input is a URL, the program will use this post route
 app.post("/clientdataUrl", async function (req, res) {
     console.log('req====+>', req.body)
-    const key = process.env.API_KEY;
-    const url = req.body.sentence;
 
     const result = await fetch("https://api.meaningcloud.com/sentiment-2.1?key=" + process.env.API_KEY + "&url=" + req.body.sentence + "&lang=en")
     try {
