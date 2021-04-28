@@ -55,5 +55,5 @@ The API call in this project is a post request to the MeaningCloud API (free).Th
 All the function are separated in client.js and each one have a test associated.
 
 ### Info Data check:
-URl is checked and in case there's a mistake, a window will pop up to let you know.
+Url is checked and in case there's a mistake, a window will pop up to let you know.
 Same if the API meaningCloud deosn't manage to analize your input or if you forget enter one before clicking on the submit button.
