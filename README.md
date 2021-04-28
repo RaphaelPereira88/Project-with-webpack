@@ -20,11 +20,9 @@ for that use your terminal in the a new folder and run:
 
 - `npm install`
 
-2) Play around with the app to see all the fonctionality:
-
- To launch the app you will need to type on your terminal :
+2) Play around with the app to see all the fonctionality.To launch the app you will need to type on your terminal :
 - `npm run start`
-and go to your browser and type:  `localhost:8081
+and go to your browser and type:  `localhost:8081`
 
 3) If you want to modify the code in your text editor, don't forget to save and then in your terminal you will need to recreate the dist folder (it is the one your browser displays). To do that you will need to type in your terminal :
 - `npm run build-prod`
