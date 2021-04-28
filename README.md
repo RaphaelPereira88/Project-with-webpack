@@ -42,9 +42,9 @@ result section. If your enter an url, it can take few seconds to analize and giv
 
 ### info on API key:
 THe API key is set up in a env. file  that is then marked in the gitignore.
-To create the env file , I used `dotenv`, see decription below:
+To create the env file , I used *dotenv*, see decription below:
 
-`dotenv allows you to separate secrets from your source code. This is useful in a collaborative environment (e.g., work, or open source) where you may not want to share your database login credentials with other people. Instead, you can share the source code while allowing other people to create their own . env file.`
+*dotenv*: allows you to separate secrets from your source code. This is useful in a collaborative environment (e.g., work, or open source) where you may not want to share your database login credentials with other people. Instead, you can share the source code while allowing other people to create their own . env file.`
 
 
 ### Info on the API calls
